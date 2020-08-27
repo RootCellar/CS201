@@ -4,6 +4,7 @@
 #define TEST_H
 
 #include <iostream>
+#include <chrono>
 
 void printLine(const char *c) {
 	std::cout << c;
