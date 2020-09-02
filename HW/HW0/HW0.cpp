@@ -18,10 +18,9 @@ int main()
 {
     //cout << "Hello World!" << endl;
 
-    //Loop 5 times, running the code inside each time
     for (int i = 0; i < 5; i++) {
-        cout << "Hello, World!" << endl; //Print "Hello, World!"
+        cout << "Hello, World!" << endl;
     }
 
-    return 0; //End the program with code 0
+    return 0;
 }
