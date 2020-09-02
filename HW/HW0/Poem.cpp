@@ -1,9 +1,9 @@
 /*
 * Darian Marvel
-* 8/31/2020
-* HW0.cpp
+* 9/2/2020
+* Poem.cpp
 * Doing HW0 for CS 201
-* Printing "Hello, World!" 5 times
+* Printing part of one of my favorite poems
 */
 
 //includes
@@ -18,11 +18,8 @@ using std::cin;
 //Main function
 int main()
 {
-    //cout << "Hello World!" << endl;
-
-    for (int i = 0; i < 5; i++) {
-        cout << "Hello, World!" << endl;
-    }
+    
+    cout << "cultivo uno rosa blanca" << endl; //Print part of a spanish poem I once memorized
 
     cout << "Press ENTER to quit ";
     while (cin.get() != '\n');
