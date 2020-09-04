@@ -9,10 +9,12 @@
 
 using std::cout;
 using std::endl;
+using std::cin;
 
 int main()
 {
     std::cout << "Hello, World!" << endl;
 
-    return 0;
+    cout << "Press ENTER to quit ";
+    while (cin.get() != '\n');
 }
