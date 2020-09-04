@@ -29,7 +29,9 @@ int main()
 
     cin.get(); //Grabbing the number up above doesn't clear the ENTER
 
+    /* //This is causing problems when typing a letter/word - spike in CPU usage
     cout << "Press ENTER to quit ";
     while (cin.get() != '\n');
+    */
 
 }
