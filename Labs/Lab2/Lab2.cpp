@@ -15,10 +15,10 @@ using std::endl;
 int main()
 {
     int enteredNumber = 0;
-    cout << "Enter an integer: ";
+    cout << "Enter an integer: "; //No endl so that the number goes on the same line
     cin >> enteredNumber;
 
-    cout << endl;
+    cout << endl; //...now we end the line.
 
     cout << "You entered: " << enteredNumber << endl;
 
@@ -27,7 +27,8 @@ int main()
 
     cout << "(Your Number + 1)^2 =  " << outputNumber << endl;
 
-    cin.get();
+    cin.get(); //Grabbing the number up above doesn't clear the ENTER
+
     cout << "Press ENTER to quit ";
     while (cin.get() != '\n');
 
