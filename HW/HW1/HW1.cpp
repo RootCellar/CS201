@@ -43,9 +43,24 @@ int main() {
 			break;
 		}
 
+		cout << endl << endl;
 
+		//start at 1, size (characters) goes up 2 each time size times
+		int maxWidth = 1 + 2 * (size - 1);
 
-		
+		//Print the top half of the diamond
+		for (int i = 1; i <= size; i++) {
+			int numChars = (2 * i) - 1;
+			int empty = maxWidth - numChars;
+			int spacesPerSide = empty / 2;
+
+			//print spaces, print characters, print spaces
+			for (int k = 0; k < spacesPerSide; k++) cout << " ";
+			for (int k = 0; k < numChars; k++) cout << "*";
+			for (int k = 0; k < spacesPerSide; k++) cout << " ";
+
+			cout << endl;
+		}
 
 	}
 
