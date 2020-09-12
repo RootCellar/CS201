@@ -62,6 +62,23 @@ int main() {
 			cout << endl;
 		}
 
+		//Print the bottom half of the diamond
+		for (int i = size-1; i >= 1; i--) {
+			int numChars = (2 * i) - 1;
+			int empty = maxWidth - numChars;
+			int spacesPerSide = empty / 2;
+
+			//print spaces, print characters, print spaces
+			for (int k = 0; k < spacesPerSide; k++) cout << " ";
+			for (int k = 0; k < numChars; k++) cout << "*";
+			for (int k = 0; k < spacesPerSide; k++) cout << " ";
+
+			cout << endl;
+		}
+
+		cout << endl;
+		cout << "Done!" << endl << endl;
+
 	}
 
 	return 0;
