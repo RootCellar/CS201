@@ -33,6 +33,7 @@ int main() {
 		}
 
 		//Collect column
+		valid = false;
 
 		while (!valid) {
 			cout << "Enter a positive integer, from 0 to " << SIZE-1 << ": ";
