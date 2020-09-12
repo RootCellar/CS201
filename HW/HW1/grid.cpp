@@ -61,7 +61,7 @@ int main() {
 		cout << "Would you like to continue? >0 to continue, otherwise exit: ";
 		cin >> inputX;
 
-		if (inputX < 1) return;
+		if (inputX < 1) return 0;
 
 	}
 }
