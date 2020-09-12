@@ -5,35 +5,50 @@
  * Doing HW1 for CS201
  */
 
+//Includes
 #include <iostream>
 
+//Using statements for ease of use
 using std::cout;
 using std::endl;
 using std::cin;
 
+//main function
 int main() {
 
 	cout << "Hello there!" << endl;
 
+	//setup
 	bool going = true;
 	int size = 0;
 
 	while (going) {
 
+		//don't immediately put endl, we want input to be on the same line
 		cout << "Enter a number, representing the size of the diamond (0 to quit): ";
-		cout << endl;
 		cin >> size;
 
+		//now place newline before continuing
+		cout << endl;
+
+		//Make sure they type a valid number
 		if (size < 0) {
 			cout << "That is not a valid number. Please try again." << endl;
 			continue;
 		}
 
+		//Allow the user to quit
 		if (size == 0) {
 			cout << "Alright. Bye!" << endl;
 			break;
 		}
 
+
+
+		
+
 	}
+
+	return 0;
 
 }
