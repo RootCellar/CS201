@@ -2,6 +2,8 @@
 
 Repository for CS201 Class.
 
+A sample makefile is placed here just to have one handy to copy around as needed.
+
 ## Labs
 
 Contains the source code files for labs. 
