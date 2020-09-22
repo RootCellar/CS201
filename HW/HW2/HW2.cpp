@@ -31,7 +31,7 @@ void debug(const string out);
 
 
 
-int main()
+int HW2()
 {
     vector<string> names;
 
