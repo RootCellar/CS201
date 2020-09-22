@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="HW2.cpp" />
 	<ClCompile Include="money.cpp" />
+	<ClCompile Include="rice.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

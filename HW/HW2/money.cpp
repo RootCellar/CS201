@@ -40,7 +40,7 @@ struct Money {
 	double totalValue;
 };
 
-int main() {
+int money() {
 	int in;
 
 	Money money;
