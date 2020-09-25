@@ -6,8 +6,12 @@
  */
 
 #include <iostream>
+#include "intio.hpp"
 
-int main()
-{
+int doInput() {
+	return getInt();
+}
 
+int compute(int i) {
+	return i * i;
 }
