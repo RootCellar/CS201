@@ -9,4 +9,7 @@ using std::cin;
 using std::endl;
 using std::string;
 
+int getLineLength(string words, int layers);
+void printStringTimes(string s, int n);
+
 #endif
