@@ -13,5 +13,6 @@ int getLineLength(string words, int layers);
 void printStringTimes(string s, int n);
 void printLayerLines(int layers, int length);
 void printMiddleLines(string in, int layers);
+void printBox(string in, int layers);
 
 #endif

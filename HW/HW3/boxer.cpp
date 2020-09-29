@@ -7,6 +7,21 @@
 
 #include "HW3.h"
 
+//Let's print this box out!
+//Calls the rest of the functions to print the box successfully
+void printBox(string in, int layers) {
+  //First lines
+  printLayerLines(4, getLineLength(in, layers) );
+
+  //Middle Lines
+  printMiddleLines(in, layers);
+
+  //Last lines
+  printLayerLines(4, getLineLength(in, layers) );
+
+  //Well that was a little easy, huh?
+}
+
 //Handle the printing of the middle 3 lines
 void printMiddleLines(string in, int layers) {
   int totalLen = getLineLength(in, layers);
