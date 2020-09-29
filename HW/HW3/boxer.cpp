@@ -11,13 +11,13 @@
 //Calls the rest of the functions to print the box successfully
 void printBox(string in, int layers) {
   //First lines
-  printLayerLines(4, getLineLength(in, layers) );
+  printLayerLines(layers, getLineLength(in, layers) );
 
   //Middle Lines
   printMiddleLines(in, layers);
 
   //Last lines
-  printLayerLines(4, getLineLength(in, layers) );
+  printLayerLines(layers, getLineLength(in, layers) );
 
   //Well that was a little easy, huh?
 }
@@ -34,6 +34,7 @@ void printMiddleLines(string in, int layers) {
   printStringTimes("*", begLen);
   printStringTimes(" ", midLen);
   printStringTimes("*", begLen);
+  cout << endl;
 
   //Yay! now the actual String!
   printStringTimes("*", begLen);
@@ -41,10 +42,12 @@ void printMiddleLines(string in, int layers) {
   cout << in;
   cout << " ";
   printStringTimes("*", begLen);
+  cout << endl;
 
   printStringTimes("*", begLen);
   printStringTimes(" ", midLen);
   printStringTimes("*", begLen);
+  cout << endl;
 
 }
 
@@ -52,6 +55,7 @@ void printMiddleLines(string in, int layers) {
 void printLayerLines(int layers, int length) {
   for( int i = 0; i < layers; i++) {
     printStringTimes("*", length);
+    cout << endl;
   }
 }
 
@@ -76,5 +80,4 @@ void printStringTimes(string s, int n) {
   for(int i = 0; i < n; i++) {
     cout << s;
   }
-  cout << endl;
 }
