@@ -14,11 +14,22 @@ using std::endl;
 void collatz(int n);
 
 int main() {
-  //Test it out
-  collatz(84);
-  cout << endl;
-  collatz(179);
-  cout << endl;
+  int num;
+  while(true) {
+
+    cout << "Enter a number to run through the collatz sequence (-1 to quit): ";
+    cin >> num;
+    cout << endl;
+    if(num == -1) {
+      return 1;
+    }
+    if(num < 1) continue;
+
+    collatz(num);
+    cout << endl;
+    cout << endl;
+
+  }
 }
 
 //Run collatz sequence on n
