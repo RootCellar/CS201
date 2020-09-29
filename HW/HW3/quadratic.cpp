@@ -14,6 +14,28 @@ using std::endl;
 bool canSolve(double a, double b, double c);
 
 int main() {
+  double a, b, c;
+
+  cout << "Time to solve a quadratic equation!" << endl;
+
+  cout << "Enter a: ";
+  cin >> a;
+  cout << endl;
+
+  cout << "Enter b: ";
+  cin >> b;
+  cout << endl;
+
+  cout << "Enter c: ";
+  cin >> c;
+  cout << endl;
+
+  if( !canSolve(a,b,c) ) {
+    cout << "Sorry, but that equation has no real roots!" << endl;
+    return 1;
+  }
+
+
 
 }
 
