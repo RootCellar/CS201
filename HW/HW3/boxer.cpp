@@ -22,3 +22,10 @@ int getLineLength(string words, int layers) {
 
   return total;
 }
+
+//Used to print out the spaces and asterisks
+void printStringTimes(string s, int n) {
+  for(int i = 0; i < n; i++) {
+    cout << s;
+  }
+}
