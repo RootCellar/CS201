@@ -7,6 +7,13 @@
 
 #include "HW3.h"
 
+//Useful for printing the beginning and ending lines
+void printLayerLines(int layers, int length) {
+  for( int i = 0; i < layers; i++) {
+    printStringTimes("*", length);
+  }
+}
+
 //Figure out how long each line will be.
 //Useful mostly for the lines of asterisks preceding the words
 int getLineLength(string words, int layers) {
