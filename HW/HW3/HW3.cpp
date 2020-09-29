@@ -18,9 +18,18 @@ int main() {
     cin >> input;
     cout << endl;
 
-    cout << "Enter the numbers of layers of the box (-1 to quit): ";
-    cin >> layers;
-    cout << endl;
+    bool valid = false;
+    while(!valid) {
+
+      cout << "Enter the numbers of layers of the box (-1 to quit): ";
+      cin >> layers;
+      cout << endl;
+      if(layers == -1) {
+        return 1;
+      }
+      if(layers > 0) valid = true;
+    }
+
 
     printBox(input, layers);
   }
