@@ -7,6 +7,32 @@
 
 #include "HW3.h"
 
+//Handle the printing of the middle 3 lines
+void printMiddleLines(string in, int layers) {
+  int totalLen = getLineLength(in, layers);
+
+  int midLen = in.size() + 2;
+
+  int begLen = layers;
+
+  //First line
+  printStringTimes("*", begLen);
+  printStringTimes(" ", midLen);
+  printStringTimes("*", begLen);
+
+  //Yay! now the actual String!
+  printStringTimes("*", begLen);
+  cout << " ";
+  cout << in;
+  cout << " ";
+  printStringTimes("*", begLen);
+
+  printStringTimes("*", begLen);
+  printStringTimes(" ", midLen);
+  printStringTimes("*", begLen);
+
+}
+
 //Useful for printing the beginning and ending lines
 void printLayerLines(int layers, int length) {
   for( int i = 0; i < layers; i++) {
@@ -35,4 +61,5 @@ void printStringTimes(string s, int n) {
   for(int i = 0; i < n; i++) {
     cout << s;
   }
+  cout << endl;
 }
