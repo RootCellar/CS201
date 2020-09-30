@@ -6,4 +6,6 @@
 using std::cout;
 using std::endl;
 
+bool isDiv3(int n);
+
 #endif
