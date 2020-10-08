@@ -9,9 +9,13 @@
 
 #define DEBUG true
 
+void debug(string out) {
+  cout << "[DEBUG] " << out << endl;
+}
+
 bool readLine(string& str){
   getline(cin, str);
-
+  debug("Tokenizer: " + str);
   if(str.size() == 0) return false;
   else return true;
 }
