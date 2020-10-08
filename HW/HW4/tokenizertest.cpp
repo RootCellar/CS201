@@ -8,5 +8,9 @@
 #include "tokenizer.h"
 
 int main() {
+  string in;
+  bool val = readLine(in);
+
+  vector<string> lines;
   
 }
