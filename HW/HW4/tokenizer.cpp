@@ -78,19 +78,19 @@ void analyzeTokens(vector<string> & tokens) {
   for(int i = 0; i < tokens.size(); i++) {
     string token = tokens[i];
     if(token == "") {
-      cout << "[whitespace]\t" << token << endl;
+      cout << "[whitespace]\t" << "\"" << token << "\"" << endl;
     }
     else if( token[0] == '\"' && token[token.size() - 1] == '\"' ) {
-      cout << "[string]\t" << token << endl;
+      cout << "[string]\t" << "\"" << token << "\"" << endl;
     }
     else if(isInt(token)) {
-      cout << "[integer]\t" << token << endl;
+      cout << "[integer]\t" << "\"" << token << "\"" << endl;
     }
     else if(isIdentifier(token)) {
-      cout << "[identifier]\t" << token << endl;
+      cout << "[identifier]\t" << "\"" << token << "\"" << endl;
     }
     else {
-      cout << "[other]\t" << token << endl;
+      cout << "[other]\t" << "\"" << token << "\"" << endl;
     }
   }
 
