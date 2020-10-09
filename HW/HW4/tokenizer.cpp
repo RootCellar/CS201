@@ -7,12 +7,14 @@
 
 #include "tokenizer.h"
 
-#define DEBUG true
+#define DEBUG false
 
+//Output a debug string
 void debug(string out) {
-  cout << "[DEBUG] " << out << endl;
+  if(DEBUG) cout << "[DEBUG] " << out << endl;
 }
 
+//Determine if str is an integer
 bool isInt(string str) {
   for(char c : str) {
     if( !(c <= '9' && c >= '0') ) {
@@ -22,6 +24,7 @@ bool isInt(string str) {
   return true;
 }
 
+//Determines if str is an identifier
 bool isIdentifier(string str) {
   for(char c : str) {
     bool isValid = false;
@@ -43,6 +46,7 @@ bool isIdentifier(string str) {
   return true;
 }
 
+//Reads a line to str, returns if it was empty or not
 bool readLine(string& str){
   getline(cin, str);
   debug("Tokenizer: " + str);
@@ -50,6 +54,7 @@ bool readLine(string& str){
   else return true;
 }
 
+//Turns the string into tokens, returning how many tokens were processed
 int stringToTokenWS(const string & input, vector<string> & tokens) {
   istringstream reader (input);
   string read = "";
@@ -73,6 +78,7 @@ int stringToTokenWS(const string & input, vector<string> & tokens) {
 
 }
 
+//Analyze the tokens, print them out along with what kind they are
 void analyzeTokens(vector<string> & tokens) {
 
   for(int i = 0; i < tokens.size(); i++) {
