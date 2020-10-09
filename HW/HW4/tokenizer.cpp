@@ -22,6 +22,27 @@ bool isInt(string str) {
   return true;
 }
 
+bool isIdentifier(string str) {
+  for(char c : str) {
+    bool isValid = false;
+
+    if( (c <= 'z' && c >= 'a') ) {
+      isValid = true;
+    }
+
+    if( (c <= 'Z' && c >= 'A') ) {
+      isValid = true;
+    }
+
+    if(c == '_') isValid = true;
+
+    if(!isValid) return false;
+
+  }
+
+  return true;
+}
+
 bool readLine(string& str){
   getline(cin, str);
   debug("Tokenizer: " + str);
@@ -54,7 +75,7 @@ int stringToTokenWS(const string & input, vector<string> & tokens) {
 
 void analyzeTokens(vector<string> & tokens) {
 
-  for(int i = tokens.size()-1; i>=0; i--) {
+  for(int i = 0; i < tokens.size(); i++) {
     string token = tokens[i];
     if(token == "") {
       cout << "[whitespace]\t" << token << endl;
@@ -64,6 +85,9 @@ void analyzeTokens(vector<string> & tokens) {
     }
     else if(isInt(token)) {
       cout << "[integer]\t" << token << endl;
+    }
+    else if(isIdentifier(token)) {
+      cout << "[identifier]\t" << token << endl;
     }
     else {
       cout << "[other]\t" << token << endl;
