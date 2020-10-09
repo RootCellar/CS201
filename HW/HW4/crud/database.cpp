@@ -44,7 +44,11 @@ bool updateRecord(string& key, const Account& account) {
 
 //Delete record
 bool deleteRecord(string& key) {
+  auto loc = database.find(key);
+  if(loc == database.end()) return false;
 
+  database.erase(key);
+  return true;
 }
 
 //Useful functions
