@@ -60,5 +60,6 @@ bool inputRecord(Account& account){
 
 //Print a record out
 bool printRecord(Account& account){
-
+  cout << "Account: " << account.balance << endl;
+  return true;
 }
