@@ -21,6 +21,25 @@ bool readLine(string& str){
 }
 
 int stringToTokenWS(const string & input, vector<string> & tokens) {
+  istringstream reader (input);
+  string read = "";
+  int totalRead = 0;
+
+  while(reader) {
+    reader >> read;
+    if(!reader) {
+      debug("stringtotoken: reached end. exiting...");
+      break;
+    }
+    else {
+      debug("stringtotoken: " + read);
+      tokens.push_back(read);
+      totalRead++;
+    }
+  }
+
+  tokens.push_back("");
+  return totalRead;
 
 }
 

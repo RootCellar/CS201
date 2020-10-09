@@ -3,6 +3,7 @@
 
 //Includes
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <vector>
 
@@ -14,6 +15,7 @@ using std::endl;
 
 using std::string;
 using std::vector;
+using std::istringstream;
 
 //Function prototypes
 bool readLine(string& str);
