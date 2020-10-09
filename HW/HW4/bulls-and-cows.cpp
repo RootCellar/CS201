@@ -18,10 +18,28 @@ using std::string;
 
 void clear(vector<int> v);
 bool intoVector(int i, vector<int>& v);
+void bullsncows(int& bulls, int& cows, vector<int>& guess, vector<int>& answer);
 
 int main() {
   vector<int> answer = {3,6,8,1};
   vector<int> guess;
+  int entry;
+}
+
+//Find bulls and cows
+void bullsncows(int& bulls, int& cows, vector<int>& guess, vector<int>& answer) {
+
+  for(int i = 0; i < guess.size(); i++) {
+
+    int g = guess[i];
+    
+    if(g == answer[i]) bulls++;
+    else {
+      for(int n : answer) if( g==n ) cows++;
+    }
+
+  }
+
 }
 
 //Place an int into a vector, returning if the int has 4 digits
