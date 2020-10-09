@@ -15,13 +15,18 @@ map<string, Account> database;
 bool createRecord(string& key) {
   Account a;
 
-  bool success = database.insert( std::make_pair(key, a) );
-  return success;
+  auto success = database.insert( std::make_pair(key, a) );
+  return success.second;
 }
 
 //Read record
 bool readRecord(string& key, Account& account) {
+  auto loc = database.find(key);
+  if(loc == database.end()) return false;
 
+  account = loc->second;
+
+  return true;
 }
 
 //Update record
@@ -43,5 +48,5 @@ bool inputRecord(Account& account){
 
 //Print a record out
 bool printRecord(Account& account){
-  
+
 }
