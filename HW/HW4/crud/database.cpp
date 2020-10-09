@@ -31,7 +31,15 @@ bool readRecord(string& key, Account& account) {
 
 //Update record
 bool updateRecord(string& key, const Account& account) {
+  auto loc = database.find(key);
+  if(loc == database.end()) return false;
 
+  database.erase(key);
+  auto success = database.insert( std::make_pair(key, account) );
+  if(!success.second) {
+    cout << "WARNING: managed to erase the old data, but could not insert new data" << endl;
+  }
+  return success.second;
 }
 
 //Delete record
