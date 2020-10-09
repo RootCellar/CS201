@@ -21,7 +21,7 @@ int main() {
     cin >> choice;
     cout << endl;
 
-    if(choice < 1 || choice > 5) {
+    if(choice < 1 || choice > 6) {
       cout << endl << "Invalid Choice!" << endl;
       continue;
     }
@@ -39,9 +39,41 @@ int main() {
       else cout << "Success!" << endl;
     }
 
+    if(choice == 2) {
+      cout << "Enter key: ";
+      cin >> key;
+      cout << endl;
+      Account a;
+      bool success = readRecord(key, a);
+      if(!success) cout << "Read of record \"" << key << "\" failed" << endl;
+      else cout << "Record Found!" << endl;
+      printRecord(a);
+    }
+
+    if(choice == 3) {
+      cout << "Enter key: ";
+      cin >> key;
+      cout << endl;
+      Account a;
+      inputRecord(a);
+      bool success = updateRecord(key,a);
+      if(!success) cout << "Update of record \"" << key << "\" failed" << endl;
+      else cout << "Record updated successfuly" << endl;
+    }
+
+    if(choice == 4) {
+      cout << "Enter key: ";
+      cin >> key;
+      cout << endl;
+      bool success = deleteRecord(key);
+      if(!success) cout << "Deletion of record \"" << key << "\" failed" << endl;
+      else cout << "Record deleted successfuly" << endl;
+    }
+
     if(choice == 5) {
       for(auto iteration : getDatabase()) {
         Account toPrint = iteration.second;
+        cout << "Key: " << iteration.first << " ";
         printRecord(toPrint);
       }
     }
