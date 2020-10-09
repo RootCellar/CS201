@@ -27,5 +27,6 @@ bool deleteRecord(string& key);
 //Useful functions
 bool inputRecord(Account& account);
 bool printRecord(Account& account);
+map<string, Account> getDatabase();
 
 #endif

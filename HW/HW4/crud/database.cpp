@@ -7,6 +7,7 @@
 
 #include "database.h"
 
+//The database
 map<string, Account> database;
 
 //CRUD
@@ -70,4 +71,8 @@ bool inputRecord(Account& account){
 bool printRecord(Account& account){
   cout << "Account: " << account.balance << endl;
   return true;
+}
+
+map<string, Account> getDatabase() {
+  return database;
 }
