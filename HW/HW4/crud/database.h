@@ -5,6 +5,8 @@
 #include <map>
 #include <iostream>
 
+#define LINE "----------"
+
 using std::map;
 using std::string;
 
