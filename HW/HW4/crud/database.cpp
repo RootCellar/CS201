@@ -55,7 +55,15 @@ bool deleteRecord(string& key) {
 
 //Allow user to enter information to construct the record
 bool inputRecord(Account& account){
+  cout << endl << "---------- Account Entry ----------" << endl;
+  cout << "balance: ";
+  double bal;
+  cin >> bal;
+  cout << endl;
+  account.balance = bal;
+  cout << "Account entry complete" << endl << endl;
 
+  return true;
 }
 
 //Print a record out
