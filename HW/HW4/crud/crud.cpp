@@ -4,3 +4,9 @@
  * crud.cpp
  * implementing CRUD functions for a database
 */
+
+#include "database.h"
+
+int main() {
+  
+}
