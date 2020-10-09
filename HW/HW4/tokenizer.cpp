@@ -45,4 +45,17 @@ int stringToTokenWS(const string & input, vector<string> & tokens) {
 
 void analyzeTokens(vector<string> & tokens) {
 
+  for(int i = tokens.size()-1; i>=0; i--) {
+    string token = tokens[i];
+    if(token == "") {
+      cout << "[whitespace]\t" << token << endl;
+    }
+    else if( token[0] == '\"' && token[token.size() - 1] == '\"' ) {
+      cout << "[string]\t" << token << endl;
+    }
+    else {
+      cout << "[other]\t" << token << endl;
+    }
+  }
+
 }
