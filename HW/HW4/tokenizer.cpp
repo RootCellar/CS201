@@ -13,6 +13,15 @@ void debug(string out) {
   cout << "[DEBUG] " << out << endl;
 }
 
+bool isInt(string str) {
+  for(char c : str) {
+    if( !(c <= '9' && c >= '0') ) {
+      return false;
+    }
+  }
+  return true;
+}
+
 bool readLine(string& str){
   getline(cin, str);
   debug("Tokenizer: " + str);
@@ -52,6 +61,9 @@ void analyzeTokens(vector<string> & tokens) {
     }
     else if( token[0] == '\"' && token[token.size() - 1] == '\"' ) {
       cout << "[string]\t" << token << endl;
+    }
+    else if(isInt(token)) {
+      cout << "[integer]\t" << token << endl;
     }
     else {
       cout << "[other]\t" << token << endl;
