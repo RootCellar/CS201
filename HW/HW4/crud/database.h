@@ -13,8 +13,7 @@ using std::cout;
 using std::endl;
 
 struct Account {
-  double balance;
-  
+  double balance = 0.0;
 };
 
 //CRUD

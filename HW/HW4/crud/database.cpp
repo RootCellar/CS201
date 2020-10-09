@@ -7,11 +7,16 @@
 
 #include "database.h"
 
+map<string, Account> database;
+
 //CRUD
 
 //Create record
 bool createRecord(string& key) {
+  Account a;
 
+  bool success = database.insert( std::make_pair(key, a) );
+  return success;
 }
 
 //Read record
@@ -38,5 +43,5 @@ bool inputRecord(Account& account){
 
 //Print a record out
 bool printRecord(Account& account){
-
+  
 }
