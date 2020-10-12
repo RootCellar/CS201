@@ -8,7 +8,7 @@ HEADERS = $(wildcard *.hpp) $(wildcard *.h)
 OBJECTS = $(patsubst %.cpp,%.o,$(SOURCES))
 
 # Write the name of your program here
-TARGET = lab14
+TARGET = lab15
 
 .PHONY: all clean
 
