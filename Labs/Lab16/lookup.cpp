@@ -29,6 +29,14 @@ bool sequentialSearch(vector<int> keys,
                   int thekey,
                   string & thevalue)
 {
+
+    for(int i=0; i<keys.size(); i++) {
+	if(keys[i] == thekey) {
+	    thevalue = values[i];
+	    return true;
+	}
+    }
+
     return false;  // DUMMY
     // TODO: Write this!
 }
