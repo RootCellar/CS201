@@ -30,7 +30,7 @@ bool sequentialSearch(vector<int> keys,
                   string & thevalue)
 {
 
-    for(int i=0; i<keys.size(); i++) {
+    for(unsigned int i=0; i<keys.size(); i++) {
 	if(keys[i] == thekey) {
 	    thevalue = values[i];
 	    return true;
