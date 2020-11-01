@@ -5,11 +5,22 @@
  * Making the bulls and cows number guessing game
 */
 
+//FL Includes
+#include <FL/Fl.H>
+#include <FL/Fl_Window.H>
+#include <FL/Fl_Overlay_Window.H>
+#include <FL/Fl_Button.H>
+#include <FL/fl_draw.H>
+#include <FL/Fl_Box.H>
+#include <FL/Fl_Input.H>
+
+//Includes
 #include <iostream>
 #include <vector>
 #include <string>
 #include <algorithm>
 
+//Using statements
 using std::cout;
 using std::endl;
 using std::cin;
@@ -18,10 +29,42 @@ using std::vector;
 using std::string;
 using std::reverse;
 
+//Function Prototypes
 void clear(vector<int> &v);
 bool intoVector(int i, vector<int>& v);
 void bullsncows(int& bulls, int& cows, vector<int>& guess, vector<int>& answer);
+void runGuess(Fl_Widget *,void *);
 
+//Data
+Fl_Box *infoBox;
+Fl_Input *input;
+Fl_Box *output;
+
+int main() {
+  Fl_Button *button;
+  button = new Fl_Button(50,50,100,100,"Guess");
+  button->callback(runGuess);
+
+  infoBox = new Fl_Box(150, 150, 160, 50,
+    "Enter a string to have truncated: "
+  );
+
+  input = new Fl_Input(150,200,200,25,"Input:");
+
+  output = new Fl_Box(150, 230, 160, 50,
+    "OUTPUT HERE"
+  );
+
+
+  return Fl::run();
+}
+
+void runGuess(Fl_Widget *,void *) {
+
+}
+
+/*
+//Original Main function for bulls and cows (from HW4)
 int main() {
   vector<int> answer = {3,6,8,1};
   //reverse(answer.begin(), answer.end());
@@ -70,6 +113,7 @@ int main() {
   }
 
 }
+*/
 
 //Find bulls and cows
 void bullsncows(int& bulls, int& cows, vector<int>& guess, vector<int>& answer) {

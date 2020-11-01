@@ -6,4 +6,4 @@ cd truncstruct
 
 cd ..
 cd bullsncows
-fltk-config --compile *.cpp
+./build.sh
