@@ -2,7 +2,7 @@
 #fltk-config --compile *.cxx
 
 cd truncstruct
-fltk-config --compile *.cpp
+fltk-config --compile main.cpp
 
 cd ..
 cd bullsncows
