@@ -23,7 +23,6 @@
 //Using statements
 using std::cout;
 using std::endl;
-using std::cin;
 
 using std::vector;
 using std::string;
@@ -36,17 +35,26 @@ void bullsncows(int& bulls, int& cows, vector<int>& guess, vector<int>& answer);
 void runGuess(Fl_Widget *,void *);
 
 //Data
+Fl_Window *window;
 Fl_Box *infoBox;
 Fl_Input *input;
 Fl_Box *output;
 
-int main() {
+int arg(int, char **argv, int& i) {
+  return i;
+}
+
+int main(int argc, char **argv) {
+  int i = 0;
+  Fl::args(argc,argv,i,arg);
+  window = new Fl_Window(500, 500);
+
   Fl_Button *button;
-  button = new Fl_Button(50,50,100,100,"Guess");
+  button = new Fl_Button(50,50,100,100, "Guess");
   button->callback(runGuess);
 
   infoBox = new Fl_Box(150, 150, 160, 50,
-    "Enter a string to have truncated: "
+    "Enter a guess for bulls and cows (int): "
   );
 
   input = new Fl_Input(150,200,200,25,"Input:");
@@ -55,11 +63,36 @@ int main() {
     "OUTPUT HERE"
   );
 
+  //Output int id of character '0'
+  std::cout << ('0' + 0) << std::endl;
+
+  window->show(argc,argv);
 
   return Fl::run();
 }
 
 void runGuess(Fl_Widget *,void *) {
+
+  output->label( ( (string) "Running..." ).c_str() );
+
+  std::string data("");
+  for(int i=0; i < input->size(); i++) {
+    data += input->value()[i];
+  }
+
+  int actualGuess = 0;
+  int magnitude = 1;
+  for(int i = data.size()-1; i >= 0; i--) {
+    if( data[i] >= '0' && data[i] <= '9' ) {
+      actualGuess += ( data[i] - 48 ) * magnitude;
+      magnitude *= 10;
+    }
+    else {
+      output->label( ( (string) "Invalid Input" ).c_str() );
+    }
+  }
+
+  cout << actualGuess << endl;
 
 }
 
@@ -120,8 +153,6 @@ void bullsncows(int& bulls, int& cows, vector<int>& guess, vector<int>& answer) 
 
   for(int i = 0; i < guess.size(); i++) {
     int g = guess[i];
-
-    cout << g << endl;
 
     if(g == answer[i]) bulls++;
     else {
