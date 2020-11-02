@@ -55,15 +55,17 @@ int main(int argc, char **argv) {
   button = new Fl_Button(50,50,100,100, "Guess");
   button->callback(runGuess);
 
-  infoBox = new Fl_Box(150, 150, 160, 50,
-    "Enter a guess for bulls and cows (int): "
+  infoBox = new Fl_Box(150, 150, 160, 250,
+    "Enter a guess for bulls and cows (int, 4 digits): "
   );
 
   input = new Fl_Input(150,200,200,25,"Input:");
 
-  output = new Fl_Box(150, 230, 200, 100,
+  output = new Fl_Box(150, 230, 200, 300,
     "OUTPUT HERE"
   );
+
+  output->labeltype(FL_NORMAL_LABEL);
 
   //Output int id of character '0'
   std::cout << ('0' + 0) << std::endl;
@@ -117,10 +119,11 @@ void runGuess(Fl_Widget *,void *) {
 
   string outputstring;
   ostringstream os;
-  os << bulls << " bulls, " << cows << " cows.";
+  os << bulls << " bulls, " << cows << " cows";
   outputstring = os.str();
   cout << outputstring << endl;
-  output->label( outputstring.c_str() );
+  cout << outputstring.c_str() << endl;
+  output->label( (& outputstring)->c_str() );
 
   if(bulls == 4) {
     cout << "YOU WON!" << endl;
