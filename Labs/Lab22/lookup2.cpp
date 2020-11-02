@@ -37,8 +37,13 @@ pair<bool, size_t>
     sequentialSearch(const vector<pair<int, string>> kvpairs,
                      int thekey)
 {
-   return {false, 0};  // DUMMY
-    // TODO: Write this!
+    for(size_t i = 0; i < kvpairs.size(); i++) {
+      if(kvpairs.at(i).first == thekey) {
+        return {true, i};
+      }
+    }
+
+   return {false, 0};
 }
 
 
@@ -113,4 +118,3 @@ int main()
     cout << "Press ENTER to quit ";
     while (cin.get() != '\n') ;
 }
-
