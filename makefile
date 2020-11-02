@@ -2,13 +2,13 @@ CXX = g++
 CXXFLAGS = -std=c++14 -g -Wall
 LDFLAGS =
 
-# We use this to 
+# We use this to
 SOURCES = $(wildcard *.cpp)
 HEADERS = $(wildcard *.hpp) $(wildcard *.h)
 OBJECTS = $(patsubst %.cpp,%.o,$(SOURCES))
 
 # Write the name of your program here
-TARGET = hello
+TARGET = main
 
 .PHONY: all clean
 
