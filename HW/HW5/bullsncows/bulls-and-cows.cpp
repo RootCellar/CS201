@@ -19,10 +19,12 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <sstream>
 
 //Using statements
 using std::cout;
 using std::endl;
+using std::ostringstream;
 
 using std::vector;
 using std::string;
@@ -59,7 +61,7 @@ int main(int argc, char **argv) {
 
   input = new Fl_Input(150,200,200,25,"Input:");
 
-  output = new Fl_Box(150, 230, 160, 50,
+  output = new Fl_Box(150, 230, 200, 100,
     "OUTPUT HERE"
   );
 
@@ -71,7 +73,10 @@ int main(int argc, char **argv) {
   return Fl::run();
 }
 
+//Run the user's guess
 void runGuess(Fl_Widget *,void *) {
+
+  vector<int> answer = {3,6,8,1};
 
   output->label( ( (string) "Running..." ).c_str() );
 
@@ -89,10 +94,38 @@ void runGuess(Fl_Widget *,void *) {
     }
     else {
       output->label( ( (string) "Invalid Input" ).c_str() );
+      return;
     }
   }
 
   cout << actualGuess << endl;
+
+  vector<int> guess;
+  bool valid = intoVector(actualGuess, guess);
+
+  if(!valid) {
+    output->label( ( (string) "Invalid Input" ).c_str() );
+    return;
+  }
+
+  reverse(guess.begin(), guess.end());
+
+  int bulls = 0;
+  int cows = 0;
+  bullsncows(bulls, cows, guess, answer);
+  //cout << bulls << " bulls, " << cows << " cows." << endl;
+
+  string outputstring;
+  ostringstream os;
+  os << bulls << " bulls, " << cows << " cows.";
+  outputstring = os.str();
+  cout << outputstring << endl;
+  output->label( outputstring.c_str() );
+
+  if(bulls == 4) {
+    cout << "YOU WON!" << endl;
+    output->label( ( (string) "YOU WON!!!" ).c_str() );
+  }
 
 }
 
