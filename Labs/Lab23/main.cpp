@@ -11,6 +11,7 @@ using std::map;
 using std::pair;
 
 int main() {
+  //Make the map
   map<int, string> students;
   students.insert( {6, "Darian"} );
   students.insert( {4, "John"} );
@@ -19,8 +20,10 @@ int main() {
   students.insert( {1, "Zach"} );
   students.insert( {7, "Ben"} );
 
+  //Remove an element from the map
   students.erase(7);
 
+  //Print it out nicely
   cout << "     " << "Students" << "     " << endl;
   cout << "-----" << "--------" << "-----" << endl;
 
