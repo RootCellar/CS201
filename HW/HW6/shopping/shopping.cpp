@@ -34,10 +34,10 @@ void printCart(vector<Item> items) {
   cout << endl;
   double total = 0;
   for(Item i : items) {
-    cout << i.name << ": $" << i.unitPrice << " / each, " << i.unitPrice * i.units << " total."<< endl;
+    cout << i.name << ": $" << i.unitPrice << " / each, " << i.units << " count, $" << i.unitPrice * i.units << " total."<< endl;
     total += i.unitPrice * i.units;
   }
-  cout <<"Total: " << total << endl;
+  cout <<"Total: $" << total << endl;
   cout << endl;
 }
 
