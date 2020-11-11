@@ -19,3 +19,12 @@ vector<Item> getStoreItems() {
 
   return storeItems;
 }
+
+//Print the list of available items
+void printMenu(vector<Item> items) {
+  cout << endl;
+  for(Item i : items) {
+    cout << i.name << ": $" << i.unitPrice << " / each" << endl;
+  }
+  cout << endl;
+}
