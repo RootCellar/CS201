@@ -17,3 +17,12 @@ int RandomBetweenU(int min, int max) {
   return uniform(e1);
 
 }
+
+//Generate a normally distributed random number
+int RandomBetweenN(int min, int max) {
+  random_device random;
+  mt19937 e1( random() );
+  normal_distribution<> normal_dist( (min + max) / 2, 2);
+
+  return normal_dist(e1);
+}
