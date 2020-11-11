@@ -17,4 +17,9 @@ struct Item {
   int units;
 };
 
+void PrintMenu(vector<Item> items);
+void PrintCart(vector<Item> items);
+
+int getInt();
+
 #endif

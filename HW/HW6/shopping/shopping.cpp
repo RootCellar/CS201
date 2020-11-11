@@ -40,3 +40,10 @@ void printCart(vector<Item> items) {
   cout <<"Total: " << total << endl;
   cout << endl;
 }
+
+//Get an int from the user
+int getInt() {
+  int i;
+  cin >> i;
+  return i;
+}
