@@ -8,5 +8,5 @@
 #include "random-map.h"
 
 int main() {
-  
+  cout << RAND_MAX << endl;
 }

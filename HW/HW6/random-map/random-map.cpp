@@ -26,3 +26,8 @@ int RandomBetweenN(int min, int max) {
 
   return normal_dist(e1);
 }
+
+//Generate a random number the C way
+int RandomBetween(int min, int max) {
+  return ( rand() % (max - min) ) + min;
+}

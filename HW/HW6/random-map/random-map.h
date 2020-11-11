@@ -14,6 +14,8 @@
 #include <random>
 #include <cmath>
 
+#include <stdlib.h>
+
 //Using
 using std::map;
 using std::cout;
