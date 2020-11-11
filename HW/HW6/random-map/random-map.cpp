@@ -31,3 +31,9 @@ int RandomBetweenN(int min, int max) {
 int RandomBetween(int min, int max) {
   return ( rand() % (max - min) ) + min;
 }
+
+void PrintDistribution(const map<int, int> &numbers) {
+  for( auto p : numbers ) {
+    cout << std::fixed << std::setw(3) << p.first << " " << string(p.second/200, '*') << endl;
+  }
+}

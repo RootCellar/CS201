@@ -21,6 +21,7 @@ using std::map;
 using std::cout;
 using std::endl;
 using std::round;
+using std::string;
 
 using std::mt19937;
 using std::uniform_int_distribution;
