@@ -28,3 +28,15 @@ void printMenu(vector<Item> items) {
   }
   cout << endl;
 }
+
+//Print the list of items in the cart
+void printCart(vector<Item> items) {
+  cout << endl;
+  double total = 0;
+  for(Item i : items) {
+    cout << i.name << ": $" << i.unitPrice << " / each, " << i.unitPrice * i.units << " total."<< endl;
+    total += i.unitPrice * i.units;
+  }
+  cout <<"Total: " << total << endl;
+  cout << endl;
+}
