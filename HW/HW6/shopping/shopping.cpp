@@ -48,3 +48,14 @@ int getInt() {
   cin >> i;
   return i;
 }
+
+//Find an item by name in a list
+bool findItemInList(string name, vector<Item> list, Item &toRet) {
+  for(Item i : list) {
+    if(name == i.name) {
+      toRet = i;
+      return true;
+    }
+  }
+  return false;
+}

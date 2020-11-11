@@ -33,6 +33,9 @@ int main() {
       cout << "What do you want to buy?" << endl;
       string name;
       cin >> name;
+      cout << "How many?" << endl;
+      int count = getInt();
+      
     }
     if(choice == 4) {
 

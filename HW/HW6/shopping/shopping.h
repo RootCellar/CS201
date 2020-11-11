@@ -20,6 +20,7 @@ struct Item {
 void printMenu(vector<Item> items);
 void printCart(vector<Item> items);
 vector<Item> getStoreItems();
+bool findItemInList(string name, vector<Item> list, Item &toRet);
 
 int getInt();
 
