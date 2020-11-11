@@ -44,6 +44,7 @@ void printCart(vector<Item> items) {
 //Get an int from the user
 int getInt() {
   int i;
+  cout << ">";
   cin >> i;
   return i;
 }

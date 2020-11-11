@@ -17,8 +17,9 @@ struct Item {
   int units;
 };
 
-void PrintMenu(vector<Item> items);
-void PrintCart(vector<Item> items);
+void printMenu(vector<Item> items);
+void printCart(vector<Item> items);
+vector<Item> getStoreItems();
 
 int getInt();
 
