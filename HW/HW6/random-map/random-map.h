@@ -4,7 +4,7 @@
 //DEFINES
 #define RANGE_HIGH 9
 #define RANGE_LOW 1
-#define RAND_COUNT 10000
+#define RAND_COUNT 20000
 
 //Includes
 #include <iostream>
