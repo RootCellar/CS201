@@ -1,4 +1,0 @@
-Use fltk, make a game with graphics
-Text based RPG with saving
-A card game?
-Online chatting program?
