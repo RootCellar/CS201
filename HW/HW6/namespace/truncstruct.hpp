@@ -15,6 +15,8 @@
 
 #include <string>
 
+namespace truncstruct {
+
 /**
  * Holds string and info about its length.
  */
@@ -41,5 +43,6 @@ StringInfo trunc(const StringInfo & stringInfo);
  */
 StringInfo trunc8(const std::string & str);
 
-#endif //#ifndef FILE_TRUNCSTRUCT_HPP_INCLUDED
+}
 
+#endif //#ifndef FILE_TRUNCSTRUCT_HPP_INCLUDED

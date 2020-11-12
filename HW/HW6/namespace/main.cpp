@@ -64,11 +64,12 @@ void run(Fl_Widget *,void *) {
     data += input->value()[i];
   }
 
-  StringInfo trunc = trunc8(data);
+  truncstruct::StringInfo trunc = truncstruct::trunc8(data);
 
   output->label(trunc.str.c_str());
 }
 
+namespace truncstruct {
 
 // trunc
 // (See header for description.)
@@ -95,4 +96,6 @@ StringInfo trunc(const StringInfo & stringInfo) {
 // (See header for description.)
 StringInfo trunc8(const string & str) {
 	return trunc(StringInfo { str, 8 });
+}
+
 }
