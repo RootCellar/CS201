@@ -34,7 +34,7 @@ void printPointerStuff(int * ip1, int * ip2) {
 	cout << "Item halfway between those pointed to by ip1, ip2: ";
 
 	// TODO: REQUIRED. Print the value at the "middle" of the array. ********
-	int * middle = ip2 - (dist / 2);
+	int * middle = ip2 - dist / 2;
 	cout << (*middle);
 
     // **********************************************************************
