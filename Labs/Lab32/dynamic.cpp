@@ -39,19 +39,22 @@ int main()
     // Make a dynamic array of int, with size at least three. Set the
     // values of the first three items in the array.
     // Then call printThree, passing (a pointer to) the array.
-    cout << "CHANGE THIS LINE!!!" << endl;
+    int *arr = new int[3];
+    arr[0] = 6;
+    arr[1] = 8;
+    arr[2] = 10;
+    printThree(arr);
     cout << endl;
 
     // Call printThree with a null pointer.
-    cout << "CHANGE THIS LINE!!!" << endl;
+    printThree(nullptr);
     cout << endl;
 
     // Deallocate the dynamic array.
-    cout << "CHANGE THIS LINE!!!" << endl;
+    delete [] arr;
     cout << endl;
 
     // Wait for user
     cout << "Press ENTER to quit ";
     while (cin.get() != '\n') ;
 }
-
