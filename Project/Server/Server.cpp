@@ -5,6 +5,8 @@
  * Handling the server side for a chat server
 */
 
+#include "../Chat.h"
+
 int main() {
 
 }
