@@ -20,6 +20,9 @@ public:
     for(int i=0; i<roomCount; i++) rooms.push_back(false);
   }
 
+  int getSize() { return rooms.size(); }
+  vector<bool> getRooms() { return rooms; }
+
 private:
 
   vector<bool> rooms;
