@@ -26,6 +26,14 @@ public:
   int getSize() { return rooms.size(); }
   vector<bool> getRooms() { return rooms; }
 
+  void setDirty(int n, bool b) {
+    rooms[n] = b;
+  }
+
+  void iterate() {
+    
+  }
+
 private:
 
   vector<bool> rooms;

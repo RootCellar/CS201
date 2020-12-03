@@ -15,7 +15,7 @@ using std::string;
 class Vacuum {
 public:
 
-  void think(House h) {
+  void think(House &h) {
     vector<bool> rooms = h.getRooms();
 
     targetRoom = -1;
@@ -32,20 +32,23 @@ public:
     }
 
     if(targetRoom < position) {
+      cout << prefix << "Deciding to move left..." << endl;
       action = 0;
     }
 
     else if(targetRoom > position) {
+      cout << prefix << "Deciding to move right..." << endl;
       action = 1;
     }
 
     else{
-      action = 3;
+      cout << prefix << "Deciding to vacuum the room I'm in..." << endl;
+      action = 2;
     }
 
   }
 
-  void act(House h) {
+  void act(House &h) {
     if(action == 0 && position > 0) {
       position--;
     }
@@ -53,7 +56,7 @@ public:
       position++;
     }
     if(action == 2) {
-      h.getRooms()[position] = 0;
+      h.setDirty(position, false);
     }
 
   }

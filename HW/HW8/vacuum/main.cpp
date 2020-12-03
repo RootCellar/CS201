@@ -18,6 +18,25 @@ int main() {
   House h;
   Vacuum v;
 
-  v.printHouse(h);
+  int choice = 0;
+
+  while(true) {
+    v.printHouse(h);
+    cout << endl;
+    cout << "1. Simulate" << endl;
+    cout << "2. Quit" << endl;
+
+    cin >> choice;
+
+    if(choice == 1) {
+      v.think(h);
+      v.act(h);
+      h.iterate();
+    }
+    if(choice == 2) {
+      exit(0);
+    }
+
+  }
 
 }
