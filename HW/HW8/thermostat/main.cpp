@@ -14,5 +14,6 @@ using std::endl;
 using std::cin;
 
 int main(){
-
+  Thermostat therm;
+  Room room;
 }
