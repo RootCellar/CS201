@@ -6,3 +6,14 @@
 */
 
 #include "Thermostat.h"
+
+class Thermostat {
+public:
+
+
+
+private:
+
+
+
+};
