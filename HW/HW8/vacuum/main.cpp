@@ -11,8 +11,13 @@
 #include <iostream>
 using std::cout;
 using std::endl;
-using std::endl;
+using std::cin;
 
 int main() {
+
+  House h;
+  Vacuum v;
+
+  v.printHouse(h);
 
 }
