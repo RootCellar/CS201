@@ -15,25 +15,23 @@ using std::cin;
 
 int main() {
 
-  House h;
+  House h(7);
   Vacuum v;
-
-  int choice = 0;
 
   while(true) {
     v.printHouse(h);
     cout << endl;
-    cout << "1. Simulate" << endl;
-    cout << "2. Quit" << endl;
+    cout << "Enter: Simulate" << endl;
+    cout << "Anything else: Quit" << endl;
 
-    cin >> choice;
+    char c = cin.get();
 
-    if(choice == 1) {
+    if(c == '\n') {
       v.think(h);
       v.act(h);
       h.iterate();
     }
-    if(choice == 2) {
+    else {
       exit(0);
     }
 
