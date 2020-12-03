@@ -54,6 +54,7 @@ int main() {
       exit(0);
     }
 
+    cout << "Received a connection. Sending welcome message..." << endl;
     send(clientSocket, message.c_str(), message.size(), 0);
 
   }

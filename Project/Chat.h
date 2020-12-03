@@ -17,6 +17,8 @@
 //C Headers - C++ doesn't seem to have it's own socket headers
 #include <sys/socket.h>
 #include <netinet/in.h>
+#include <arpa/inet.h>
+#include <unistd.h>
 
 //Using statements
 using std::cout;
