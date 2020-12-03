@@ -28,7 +28,7 @@ public:
   }
 
   void iterate() {
-    cout << _prefix << "Heat was: " << _temp << endl;
+    //cout << _prefix << "Heat was: " << _temp << endl;
 
     cout << _prefix << "[DEBUG] _heater: " << _heaterOn << endl;
 
@@ -41,7 +41,7 @@ public:
       _temp--;
     }
 
-    cout << _prefix << "Heat is: " << _temp << endl;
+    //cout << _prefix << "Heat is: " << _temp << endl;
 
   }
 
