@@ -11,11 +11,28 @@ using std::string;
 class Room {
 public:
 
-  int getTemp(){ return _temp; }
+  Room() {
+    _heaterOn = 1;
+  }
 
-  void setHeaterOn(bool b){ _heater = b; }
+  int getTemp(){ return _temp; }
+  bool isHeatOn() { return _heaterOn; }
+
+  void setHeaterOn(bool b) {
+    if(b) cout << _prefix << "Turning the heater on..." << endl;
+    else cout << _prefix << "Turning the heater off..." << endl;
+
+    _heaterOn = b;
+
+    cout << _prefix << "[DEBUG] _heater: " << _heaterOn << endl;
+  }
+
   void iterate() {
-    if(_heater) {
+    cout << _prefix << "Heat was: " << _temp << endl;
+
+    cout << _prefix << "[DEBUG] _heater: " << _heaterOn << endl;
+
+    if(_heaterOn) {
       cout << _prefix << "Heater on, heating up..." << endl;
       _temp++;
     }
@@ -23,12 +40,16 @@ public:
       cout << _prefix << "Heater off, cooling off..." << endl;
       _temp--;
     }
+
+    cout << _prefix << "Heat is: " << _temp << endl;
+
   }
 
 private:
 
   int _temp = 72;
-  bool _heater = false;
+
+  bool _heaterOn;
 
   string _prefix = "[Room] ";
 
