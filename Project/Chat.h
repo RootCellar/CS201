@@ -7,6 +7,7 @@
 //and server always knows where to bind the socket
 #define PORT 8000
 
+//Size of buffer for receiving messages
 #define BUFFER_SIZE 1024
 
 //Normal C++ Headers
@@ -29,18 +30,5 @@ using std::string;
 using std::to_string;
 
 using std::thread;
-
-
-class SocketHandler
-{
-private:
-
-  bool isConnected;
-
-public:
-
-
-
-};
 
 #endif

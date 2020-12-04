@@ -22,7 +22,7 @@ int main() {
   }
 
   serv_addr.sin_family = AF_INET;
-  serv_addr.sin_port = htons ( PORT );
+  serv_addr.sin_port = htons( PORT );
 
   int success = inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr);
   if(success <= 0) {
@@ -38,6 +38,7 @@ int main() {
 
   cout << "Connected. Receiving message from server..." << endl;
   amtRead = read(socketToServer, buffer, BUFFER_SIZE);
+  cout << "[DEBUG] " << amtRead << " bytes" << endl;
   cout << buffer << endl;
 
 }

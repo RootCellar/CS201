@@ -8,7 +8,7 @@
 #include "../Chat.h"
 
 int main() {
-  int serverSocket, clientSocket, valread;
+  int serverSocket, clientSocket, amtRead;
   sockaddr_in address;
   int opt = 1;
   int addrlen = sizeof(address);
@@ -56,6 +56,22 @@ int main() {
 
     cout << "Received a connection. Sending welcome message..." << endl;
     send(clientSocket, message.c_str(), message.size(), 0);
+
+    while(true) {
+
+      for(int i=0; i<BUFFER_SIZE; i++) { buffer[i] = 0; }
+
+      amtRead = read(clientSocket, buffer, BUFFER_SIZE);
+
+      cout << amtRead << endl;
+
+      if(amtRead < 1) {
+        cout << "Connection Lost." << endl;
+        exit(0);
+      }
+
+      if(amtRead > 0) cout << amtRead << ": " << buffer;
+    }
 
   }
 
