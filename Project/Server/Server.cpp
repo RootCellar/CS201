@@ -39,6 +39,7 @@ int main() {
   }
 
   int didListen = 0;
+  bool going = true;
   while(true) {
     didListen = listen(serverSocket, 3);
 
@@ -57,17 +58,20 @@ int main() {
     cout << "Received a connection. Sending welcome message..." << endl;
     send(clientSocket, message.c_str(), message.size(), 0);
 
-    while(true) {
+    going = true;
+
+    while(going) {
 
       for(int i=0; i<BUFFER_SIZE; i++) { buffer[i] = 0; }
 
       amtRead = read(clientSocket, buffer, BUFFER_SIZE);
 
-      cout << amtRead << endl;
+      //cout << amtRead << endl;
 
       if(amtRead < 1) {
         cout << "Connection Lost." << endl;
-        exit(0);
+        going = false;
+        continue;
       }
 
       if(amtRead > 0) cout << amtRead << ": " << buffer;
