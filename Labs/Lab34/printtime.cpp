@@ -13,6 +13,12 @@ using std::cout;
 using std::endl;
 using std::cin;
 
+#include <iomanip>
+using std::setw;
+using std::setfill;
+using std::right;
+using std::left;
+
 
 // Class Time
 // Holds a time of day: hours, minutes, seconds. Can print its stored
@@ -23,13 +29,19 @@ public:
 // ***** Time: constructors *****
 
     // TODO: Put something here!
+    Time() {
+      _hr = 2;
+      _min = 6;
+      _sec = 4;
+    }
 
 // ***** Time: general public member functions *****
 
     void print() const
     {
-        cout << "SOMETHING NEEDS TO GO HERE";  // DUMMY
+        //cout << "SOMETHING NEEDS TO GO HERE";  // DUMMY
         // TODO: Write this!
+        cout << setfill('0') << setw(2) << _hr << ":" << setw(2) << _min << ":" << setw(2) << _sec;
     }
 
 // ***** Time: data members *****
@@ -59,4 +71,3 @@ int main()
     cout << "PRESS ENTER to quit ";
     while (cin.get() != '\n') ;
 }
-
