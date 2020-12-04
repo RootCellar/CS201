@@ -4,6 +4,10 @@ Repository for CS201 Class.
 
 A sample makefile is placed here just to have one handy to copy around as needed.
 
+## Project
+
+Contains my project source code. The project was intended to be a chatting program.
+
 ## Labs
 
 Contains the source code files for labs. 
