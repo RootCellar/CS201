@@ -7,6 +7,7 @@ A sample makefile is placed here just to have one handy to copy around as needed
 ## Project
 
 Contains my project source code. The project was intended to be a chatting program.
+A chatting program didn't seem quite so possible, as it would require multithreading.
 
 ## Labs
 
